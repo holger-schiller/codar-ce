@@ -16,8 +16,8 @@ codar:
     - "oo:oo"
   command: "/bin/bash -c  \"sleep 120; /tmp/codarconfig.sh; tail -f /dev/null\""
   environment:
-    dockerclient_hostname: vmhostname
-    dockerclient_ipaddress: vmipaddress
+    dockerclient_hostname: mydockerclient.mydomain.com
+    dockerclient_ipaddress: 192.168.99.100
 oo:
   image: hpsoftware/useitwithcsacodar:ooce10501
   volumes:
@@ -28,5 +28,5 @@ oo:
     - "commondb:commondb"
   command: "/bin/bash -c  \"sleep 60; /tmp/ooconfig.sh; tail -f /dev/null\""
   environment:
-    dockerclient_hostname: vmhostname
-    dockerclient_ipaddress: vmipaddress
+    dockerclient_hostname: mydockerclient.mydomain.com
+    dockerclient_ipaddress: 192.168.99.100
